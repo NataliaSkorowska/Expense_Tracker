@@ -1,0 +1,31 @@
+
+<div class="container">
+  <ion-grid class="ion-align-items-center">
+    <ion-row class="ion-justify-content-center">
+      <ion-col size ="8" class="ion-justify-content-center">
+        <ion-img
+          role="button"
+          class="image"
+          (click)="onPickImage()"
+          [src]="selectedImage"
+          *ngIf="selectedImage">
+        </ion-img>
+      </ion-col>
+  </ion-row>
+  </ion-grid>
+
+  <ion-grid class="ion-align-items-center">
+    <ion-row class="ion-justify-content-center">
+      <ion-col size="4md" class="ion-justify-content-center">
+        <ion-button
+          color="primary"
+          (click)="onPickImage()"
+          *ngIf="!selectedImage">
+        <ion-icon name="camera" slot="start"></ion-icon>
+      <ion-label>Dodaj zdjęcie paragonu</ion-label>
+    </ion-button>
+  </ion-col>
+</ion-row>
+</ion-grid>
+</div>
+<P align="center"><strong>To zdjęcie będzie dowodem zakupu</strong></P>

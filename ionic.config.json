@@ -1,0 +1,7 @@
+{
+  "name": "Expenses Application",
+  "integrations": {
+    "capacitor": {}
+  },
+  "type": "angular"
+}
