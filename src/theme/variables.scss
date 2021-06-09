@@ -3,6 +3,48 @@
 
 /** Ionic CSS Variables **/
 :root {
+  --ion-font-family: 'Lato';
+  
+  /** Custom theme **/
+  --ion-color-theme: #9D4EDD;
+  --ion-color-theme-rgb: 157, 78, 221;
+  --ion-color-theme-contrast: #ffffff;
+  --ion-color-theme-contrast-rgb: 255, 255, 255;
+  --ion-color-theme-lightshade: #7B2CBF;
+  --ion-color-theme-shade: #5A189A;
+  --ion-color-theme-tint: #3C096C;
+  --ion-color-theme-dark: #10002B;
+.button-add {
+  --background: var(--ion-color-theme);
+}
+.button-show {
+  --background: var(--ion-color-theme-lightshade);
+}
+.button-close {
+  --background: var(--ion-color-theme-tint);
+}
+ion-card-header {
+  --background: var(--ion-color-theme-shade);
+  --color: var(--ion-color-theme-contrast);
+}
+ion-text {
+  --color: var(--ion-color-theme-contrast);
+}
+ion-label {
+  --color: var(--ion-color-theme-contrast);
+}
+ion-toolbar {
+  --background: var(--ion-color-theme-shade);
+  --color: var(--ion-color-theme-contrast);
+  --min-height: 56px;
+  --opacity: 1;
+  --padding-bottom: 4px;
+  --padding-end: 4px;
+  --padding-start: 4px;
+  --padding-top: 4px;
+  --font-size: 2em;
+}
+
   /** primary **/
   --ion-color-primary: #3880ff;
   --ion-color-primary-rgb: 56, 128, 255;
@@ -83,6 +125,15 @@
    */
 
   body {
+    --ion-color-theme: #9D4EDD;
+    --ion-color-theme-rgb: 157, 78, 221;
+    --ion-color-theme-contrast: #ffffff;
+    --ion-color-theme-contrast-rgb: 255, 255, 255;
+    --ion-color-theme-contrast-lightshade: #7B2CBF;
+    --ion-color-theme-shade: #5A189A;
+    --ion-color-theme-tint: #3C096C;
+    --ion-color-theme-dark: #10002B;
+
     --ion-color-primary: #428cff;
     --ion-color-primary-rgb: 66,140,255;
     --ion-color-primary-contrast: #ffffff;

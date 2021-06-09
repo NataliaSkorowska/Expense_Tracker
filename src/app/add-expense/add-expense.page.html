@@ -1,6 +1,6 @@
 <ion-header>
-  <ion-toolbar color="success">
-    <ion-title>Dodaj wydatek</ion-title>
+  <ion-toolbar>
+    <ion-title size="small">Dodaj wydatek</ion-title>
     <ion-buttons slot="start">
       <ion-back-button defaultHref="home"></ion-back-button>
     </ion-buttons>
@@ -14,14 +14,14 @@
 
 <ion-content>
   <ion-card>
-    <ion-card-header color="success"><Strong>1.Nazwa i data wydatku</Strong></ion-card-header>
+    <ion-card-header><Strong>1. Nazwa i data wydatku</Strong></ion-card-header>
      <form [formGroup]="receiptForm" (ngSubmit)="formSubmit()">
     <ion-item>
       <ion-label position="floating">Nazwa</ion-label>
         <ion-input formControlName="name" type="text" [(ngModel)] ="expense.Name" required id="name" name="name"></ion-input>
       </ion-item>
     <ion-item>
-      <ion-label>Data paragonu</ion-label>
+      <ion-label>Data</ion-label>
         <ion-datetime formControlName="date" [(ngModel)] ="expense.Date" display-format="DD MMM YYYY" placeholder="Wybierz datę" id="expense_date"></ion-datetime>     
     </ion-item>
      <ion-item>
@@ -32,9 +32,9 @@
     <ion-label position="floating">Zdjecie</ion-label>
         <ion-input formControlName="image" type="text" value={{image}} disabled placeholder={{image}}></ion-input>
       </ion-item>
-    <ion-button type="submit" color="primary" shape="full" expand="block">Zapisz</ion-button>
+    <ion-button class="button-add" type="submit" shape="full" expand="block">Zapisz</ion-button>
     </form>
-      <ion-card-header color="success"><Strong>2. Pozycja paragonu</Strong></ion-card-header>
+      <ion-card-header><Strong>2. Pozycja paragonu</Strong></ion-card-header>
       <ion-item>
         <ion-label position="floating">Opis</ion-label>
           <ion-input type="text" [(ngModel)] ="expense.Reason" id="input-reason"></ion-input>
@@ -46,25 +46,25 @@
       <div class="ion-margin-vertical ion-text-center">
         <ion-button (click)="clearList()" fill="outline" color="danger" id="btn-cancel">
         <ion-icon name="close" slot="start"></ion-icon>Usuń pozycję</ion-button>
-        <ion-button type="submit" id="btn-confirm" (click)="addLine()">
+        <ion-button class="button-add" type="submit" id="btn-confirm" (click)="addLine()">
         <ion-icon name="add-outline" slot="start"></ion-icon>Dodaj pozycję</ion-button>
          </div>
      
     </ion-card>
-    <ion-card color="dark">
-      <ion-card-header><Strong>Dodane pozycję z tego paragonu: </Strong></ion-card-header>
-        <ion-grid color="dark">
-          <ion-row color="dark">
-            <ion-col  color="dark">
-              <ion-list  color="dark" class="ion-no-padding">
-                <ion-item lines="none" color="dark" *ngFor="let exp of expList">
+    <ion-card>
+      <ion-card-header>Dodane pozycję z tego paragonu:</ion-card-header>
+        <ion-grid>
+          <ion-row>
+            <ion-col>
+              <ion-list class="ion-no-padding">
+                <ion-item lines="none" *ngFor="let exp of expList">
                   <ion-label class="ion-text-wrap">{{ exp }}</ion-label>
                 </ion-item>
               </ion-list>
             </ion-col>
             <ion-col>
           <ion-list class="ion-no-padding">
-          <ion-item lines="none" color="dark" *ngFor="let exp of expListAmount">
+          <ion-item lines="none" *ngFor="let exp of expListAmount">
             <ion-label class="ion-text-wrap ion-text-right">{{ exp }} </ion-label>
           </ion-item>
         </ion-list>
@@ -74,7 +74,7 @@
           <h3 align="center">Suma paragonu: {{ totalExpense }} zł</h3>
       </ion-card>   
   <ion-card>
-    <ion-card-header color="success"><Strong>3. Zdjęcie paragonu</Strong></ion-card-header>
+    <ion-card-header>3. Zdjęcie paragonu</ion-card-header>
     <app-image-picker (imagePick)="onImagePicked($event)"></app-image-picker>
   </ion-card>
 </ion-content>

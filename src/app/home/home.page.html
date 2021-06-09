@@ -1,8 +1,6 @@
-<ion-header [translucent]="true">
-  <ion-toolbar color="dark" align="center">
-    <ion-title>
-      Kontrola wydatków
-    </ion-title>
+<ion-header>
+  <ion-toolbar class="toolbar">
+    <ion-title size="small">Kontrola wydatków</ion-title>
   </ion-toolbar>
 </ion-header>
 <ion-content [fullscreen]="true">
@@ -11,22 +9,40 @@
       <ion-title size="large">Kontrola wydatków</ion-title>
     </ion-toolbar>
   </ion-header>
-
   <div id="container">
     <ion-grid class="ion-align-items-center">
       <ion-row>
         <ion-col>
-          <ion-button href="/add-expense/" color="success">Dodaj wydatek</ion-button>
+          <ion-icon class="ion-icon-receipt" name="receipt-outline"></ion-icon>
         </ion-col>
       </ion-row>
       <ion-row>
         <ion-col>
-          <ion-button href="/view-expenses/" color="tertiary">Zobacz wydatki</ion-button>
+          <span>Aplikacja do kontroli wydatków</span><br><br>
         </ion-col>
       </ion-row>
       <ion-row>
         <ion-col>
-        <ion-button (click)="exitApp()" color="danger">Zamknij aplikację</ion-button>
+          <ion-button class="button-add" href="/add-expense/">
+            <ion-icon name="add-circle-outline"></ion-icon>&nbsp;
+            Dodaj wydatek
+          </ion-button>
+        </ion-col>
+      </ion-row>
+      <ion-row>
+        <ion-col>
+          <ion-button class="button-show" href="/view-expenses/">
+            <ion-icon name="eye-outline"></ion-icon>&nbsp;
+            Zobacz wydatki
+          </ion-button>
+        </ion-col>
+      </ion-row>
+      <ion-row>
+        <ion-col>
+        <ion-button class="button-close" (click)="exitApp()">
+          <ion-icon name="exit-outline"></ion-icon>&nbsp;
+          Zamknij aplikację
+        </ion-button>
         </ion-col>
       </ion-row>
     </ion-grid>

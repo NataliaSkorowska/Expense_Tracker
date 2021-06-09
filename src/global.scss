@@ -24,3 +24,18 @@
 @import "~@ionic/angular/css/text-alignment.css";
 @import "~@ionic/angular/css/text-transformation.css";
 @import "~@ionic/angular/css/flex-utils.css";
+
+@font-face {   
+    font-family: 'Lato'; 
+    src: url('src/assets/fonts/Lato-Black.ttf');
+  }
+
+.ion-icon-receipt {
+    font-size: 128px;
+}
+h3 {
+    color: white;
+}
+ion-title {
+    size: small;
+  }
