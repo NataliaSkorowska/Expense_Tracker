@@ -32,4 +32,8 @@ export class ViewExpensesPage implements OnInit {
       console.log(res)
     })
   }
+
+  deleteReceipt(key){
+    this.aptService.deleteReceipt(key);
+  }
 }

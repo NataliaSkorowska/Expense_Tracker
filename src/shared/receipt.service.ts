@@ -29,4 +29,10 @@ export class ReceiptService {
     this.receiptListRef = this.db.list('/Receipt');
     return this.receiptListRef;
   }
+
+  //Delete 
+  deleteReceipt(receipt_id:string){
+    this.receiptListRef = this.db.list('/Receipt');
+    this.receiptListRef.remove(receipt_id);
+  }
 }

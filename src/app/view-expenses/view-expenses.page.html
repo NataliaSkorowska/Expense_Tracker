@@ -10,7 +10,11 @@
   <div id="container">
     <ion-item *ngFor="let receipt of Receipts" class="user-list">
       <ion-card>
-        <ion-card-title>{{receipt.name}}</ion-card-title>
+        <ion-card-title>{{receipt.name}}
+        <ion-button color="danger" (click)="deleteReceipt(receipt.$key)" style="float: right">
+        <ion-icon name="trash-outline"></ion-icon>
+        </ion-button>
+        </ion-card-title>
         <ion-card-content>
           <ion-list>
             <ion-label>Data:</ion-label>
